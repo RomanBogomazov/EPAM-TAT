@@ -6,6 +6,6 @@ package igorhmm.currenttime;
  */
 public class EntryPoint{
 	public static void main(String[] args){		
-		System.out.println("Current time is " + CurrentTime.getTime("HH:mm:ss"));
+		System.out.println("Current time is " + CurrentTime.getTime("HH:mm"));	//Not so current time
 	}
 }
