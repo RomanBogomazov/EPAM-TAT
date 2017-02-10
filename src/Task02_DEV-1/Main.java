@@ -10,8 +10,8 @@ public class Main {
      *
     public static void main(String[] args) {
 
-    private int LengthOfArgs=args.length;
-    args.length--;
+        private int LengthOfArgs=args.length;
+        args.length--;
 
         for(int i=0; i<3, i++) {
             int randCount = (int) (Math.random() * args.length);
