@@ -3,12 +3,12 @@
  */	 
 public class Main {
 
-	/**
-	 * We need more information
-	 * @param 
-	 * @return 
-	 */	 
-	 public static void main() {
+    /**
+     * We need more information, becouse if we dont have requirements, this programm work correctly
+     * @param 
+     * @return 
+     */	 
+    public static void main() {
 
-	}
+    }
 }
