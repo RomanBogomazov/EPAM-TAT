@@ -25,8 +25,11 @@ public class List
 
 	System.out.println();
 	System.out.println("Average = " + operations.average(persons, count));
- 
+
 	System.out.println();
 	System.out.println("Max age = " + operations.max_age(persons, count));
+
+	System.out.println();
+	System.out.println("Popular female name = " + operations.popular_female_name(persons, count));
 	}
 }

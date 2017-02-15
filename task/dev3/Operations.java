@@ -20,21 +20,28 @@ class Operations
 		return max;
 	}
 
-/*	public String popular_female_name(Person[] persons, int count)
+	public String popular_female_name(Person[] persons, int count)
 	{
-		String name;
-		int max_count, count = 0;
-		
+		String name = null;
+		int max_count, count_cycle = 0;
+		max_count = count;
+			
 		for(int i = 0; i < count; i++) 
 		{
-			name = persons[0].name;
-			max_count = count;
-			for(int j = i+1; j < count; j++) 
-			{
-				if(name.equals(persons[j].name)) count++;
-					max = Integer.valueOf(persons[i].age);
-			}
+			if(persons[i].sex.equals("female")) {
+				name = persons[i].name;
+				for(int j = i+1; j < count; j++)
+					if(name.equals(persons[j].name))
+						count_cycle++;
+
+				if(max_count < count_cycle)
+				{
+					max_count = count_cycle;
+					name = persons[i].name;
+				}
+			
+				}
 		}
 		return name;
 	}
-*/}
+}
