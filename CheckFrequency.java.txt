@@ -1,0 +1,14 @@
+package frequency;
+
+
+/**
+ * Class of frequency
+ */
+public class CheckFrequency {
+
+  /**
+   */
+  String CheckFrequency {
+    //TODO
+  }
+}
