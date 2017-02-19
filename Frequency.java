@@ -26,6 +26,8 @@ public class Frequency {
       CheckWordsForMoreFiveLitters checkWordsForMoreFiveLitters = new CheckWordsForMoreFiveLitters();
       numberOfWordsMoreFiveLitters += checkWordsForMoreFiveLitters.CheckWordsForMoreFiveLitters(newText);
       System.out.println("Number of words more five litters = " + numberOfWordsMoreFiveLitters);
+      CheckAndOutputFrequency checkAndOutputFrequency = new CheckAndOutputFrequency();
+      checkAndOutputFrequency.CheckAndOutputFrequency(allText);
       if (iteration>=numforForAsk) {
         AskForExit askForExit = new AskForExit();
         repeat = askForExit.askForExit();
