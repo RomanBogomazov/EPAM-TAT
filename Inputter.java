@@ -12,9 +12,9 @@ public class Inputter {
    * return string which was inputting
    */
   String Input() {
+    System.out.println("Input new text");
     Scanner in = new Scanner(System.in);
     String string=in.nextLine().toLowerCase();
-    System.out.println(string);
     return string;
   }
 }
