@@ -1,5 +1,10 @@
+/** Main class. */
+
 class Main
 {
+
+/** Main method. */
+
   public static void main(String[] args) {
     System.out.println("day-d, dd, ddd, dddd");
     System.out.println("month-M, MM, MMM, MMMM");

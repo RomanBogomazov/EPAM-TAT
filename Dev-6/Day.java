@@ -2,10 +2,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/** Class to chose output of day. */
+
 class Day
 {
   Calendar date = new GregorianCalendar();
   DayOfWeek dof = new DayOfWeek();
+
+/** Constructor only compare param of output and otput param. */
 
   Day(String text) {
 

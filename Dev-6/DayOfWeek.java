@@ -1,6 +1,10 @@
+/** Class to chose name of day for output day on formats "ddd" and "dddd" of Day. */
+
 class DayOfWeek
 {
   String day = new String();
+
+/** Method return short name of week day. */
 
   String getShort(int dayNumber) {
     switch (dayNumber) {
@@ -22,6 +26,8 @@ class DayOfWeek
 
     return day;
   }
+
+/** Method return full name of week day. */
 
   String getFull(int dayNumber) {
     switch(dayNumber) {

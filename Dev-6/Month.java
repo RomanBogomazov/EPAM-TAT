@@ -2,10 +2,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/** Class to chose output of month. */
+
 class Month
 {
   Calendar date = new GregorianCalendar();
   NameOfMonth nom = new NameOfMonth();
+
+/** Constructor only compare param of output and otput param. */
 
   Month(String text) {
 
