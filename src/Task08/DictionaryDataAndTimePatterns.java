@@ -6,7 +6,7 @@ public class DictionaryDataAndTimePatterns {
     private String[][] dictionaryDateFormatting = new String[49][3];
 
   /**
-   * Class with dictionary of data and time patterns 
+   * Method with initalization dictionary of data and time patterns 
    */
   public void init(){
     dictionaryDateFormatting[0][0] = "d";
@@ -109,6 +109,10 @@ public class DictionaryDataAndTimePatterns {
     dictionaryDateFormatting[48][1] = "\\";
   }
 
+  /**
+   * Method for return dictionary of data and time patterns 
+   * return String[][] 
+   */
   public String[][] get() {
     return dictionaryDateFormatting;
   }
