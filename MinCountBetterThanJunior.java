@@ -1,15 +1,18 @@
-/** Class decide task ¹3. */
-
 import java.util.*;
 
-class MinCountBetterThanJunior
-{
+/**
+ * Class decide task ¹3.
+ */
 
-/** Method return count of staff to decide this task. */
+class MinCountBetterThanJunior {
+
+/**
+ * Method return count of staff to decide this task.
+ */
 
   int[] get(int skill) {
     int count = 0;
-    int[] team_count = {0, 0, 0, 0}; 
+    int[] team_count = {0, 0, 0, 0};  //massiv, which consist counts of each qualification
     Junior junior = new Junior();
     Middle middle = new Middle();
     Senior senior = new Senior();

@@ -1,9 +1,12 @@
-/** Class, where user chose task. */
+/**
+ * Main class, where user chose task.
+ */
 
-class Ordering
-{
+class Ordering {
 
-/** Main method. */
+/**
+ * Main method.
+ */
 
   public static void main(String[] args) {
     Input input = new Input();

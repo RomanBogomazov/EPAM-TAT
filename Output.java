@@ -1,9 +1,12 @@
-/** Class to output information in task. */
+/**
+ * Class to output information in task.
+ */
 
-class Output
-{
+class Output {
 
-/** Method to output count of staff. */
+/**
+ * Method to output count staff of each qualification.
+ */
 
   public void get(int[] team_count) {
     System.out.println();

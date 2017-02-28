@@ -1,11 +1,14 @@
 import java.util.*;
 
-/** Class to input params: check, criterion chose, needed skill. */
+/**
+ * Class to input params: money check, criterion chose, needed skill. 
+ */
 
-class Input
-{
+class Input {
 
-/** Method to input check. */
+/**
+ * Method to input money check.
+ */
 
   public int check() {
     Scanner cmd = new Scanner(System.in);
@@ -14,7 +17,9 @@ class Input
     return cmd.nextInt();
   }
 
-/** Method to input criterion chose. */
+/**
+ * Method to input criterion chose. 
+ */
 
   public byte chose() {
     Scanner cmd = new Scanner(System.in);
@@ -23,7 +28,9 @@ class Input
     return cmd.nextByte();
   }
 
-/** Method to input criterion needed skill. */
+/**
+ * Method to input criterion of needed skill.
+ */
 
   public int teamSkill() {
     Scanner cmd = new Scanner(System.in);

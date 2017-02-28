@@ -1,14 +1,17 @@
-/** Class decide task ¹2. */
+/**
+ * Class decide task ¹2.
+ */
 
-class MinCoastWithFixedSkill
-{
+class MinCoastWithFixedSkill {
 
-/** Method return count of staff to decide this task. */
+/**
+ * Method return count of staff to decide this task.
+ */
 
 
   int[] get(int skill) {
     int min = 0;
-    int[] team_count = {0, 0, 0, 0}; 
+    int[] team_count = {0, 0, 0, 0};  //massiv, which consist counts of each qualification
     Junior junior = new Junior();
     Middle middle = new Middle();
     Senior senior = new Senior();
