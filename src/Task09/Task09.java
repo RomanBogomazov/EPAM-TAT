@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Method
- * params
- * return
+ * Main class
  */
 public class Task09 {
 
