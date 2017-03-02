@@ -24,12 +24,12 @@ public class Inputter {
   }
 
   /**
-   * Method for input  elements of matrix and return massiv of elements
+   * Method for input  elements of matrix and return array of elements
    *
    * @params reader
    * @params numberOfColumns - of matrix
    * @params numberOfLines - of matrix
-   * @return double[][] - massiv of elements of matrix
+   * @return double[][] - array of elements of matrix
    */
   private double[][] inputMatrix(BufferedReader reader, int numberOfColumns, int numberOfLines) throws Exception {
     double[][] array = new double[numberOfLines][numberOfColumns];
@@ -48,7 +48,7 @@ public class Inputter {
         }
       }
     }
-    return massiv;
+    return array;
   }
 
   /**
