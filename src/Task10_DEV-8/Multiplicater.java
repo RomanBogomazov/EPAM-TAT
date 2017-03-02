@@ -15,10 +15,8 @@ public class Multiplicater {
    * @params secondMatrix - for multiply(how B)
    * @params resoultingMatrix - for resoult of multiplying(how C)
    */
-  public void multiplyMatrix(DoubleMatrix firstMatrix, DoubleMatrix secondMatrix,
-      BigDecimalMatrix resoultingMatrix) {
-    BigDecimal[][] massiv = new BigDecimal[firstMatrix.getNumberOfLines()][secondMatrix
-        .getNumberOfColumns()];
+  public void multiplyMatrix(DoubleMatrix firstMatrix, DoubleMatrix secondMatrix, BigDecimalMatrix resoultingMatrix) {
+    BigDecimal[][] massiv = new BigDecimal[firstMatrix.getNumberOfLines()][secondMatrix.getNumberOfColumns()];
     for (int i = 0; i < firstMatrix.getNumberOfLines(); i++) {
       for (int j = 0; j < secondMatrix.getNumberOfColumns(); j++) {
         massiv[i][j] = new BigDecimal("0");
