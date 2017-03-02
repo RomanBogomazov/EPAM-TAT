@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class Outputter {
 
   /**
-   * Method for output to display BigDecimal matrix
+   * Method for output to console elements of BigDecimal matrix
    *
    * @params resoultingMatrix - for output
    */
