@@ -16,19 +16,19 @@ public class Multiplicater {
    * @params resoultingMatrix - for resoult of multiplying(how C)
    */
   public void multiplyMatrix(DoubleMatrix firstMatrix, DoubleMatrix secondMatrix, BigDecimalMatrix resoultingMatrix) {
-    BigDecimal[][] massiv = new BigDecimal[firstMatrix.getNumberOfLines()][secondMatrix.getNumberOfColumns()];
+    BigDecimal[][] array = new BigDecimal[firstMatrix.getNumberOfLines()][secondMatrix.getNumberOfColumns()];
     for (int i = 0; i < firstMatrix.getNumberOfLines(); i++) {
       for (int j = 0; j < secondMatrix.getNumberOfColumns(); j++) {
-        massiv[i][j] = new BigDecimal("0");
+        array[i][j] = new BigDecimal("0");
         for (int k = 0; k < firstMatrix.getNumberOfColumns(); k++) {
           String stringValueInFirstMatrix = String.valueOf(firstMatrix.getMatrix()[i][k]);
           BigDecimal bigDecimalValueInFirstMatrix = new BigDecimal(stringValueInFirstMatrix);
           String stringValueInSecondMatrix = String.valueOf(secondMatrix.getMatrix()[k][j]);
           BigDecimal bigDecimalValueInSecondMatrix = new BigDecimal(stringValueInSecondMatrix);
-          massiv[i][j] = massiv[i][j].add(bigDecimalValueInFirstMatrix.multiply(bigDecimalValueInSecondMatrix));
+          array[i][j] = massiv[i][j].add(bigDecimalValueInFirstMatrix.multiply(bigDecimalValueInSecondMatrix));
         }
       }
     }
-    resoultingMatrix.setMatrix(massiv, secondMatrix.getNumberOfColumns(), firstMatrix.getNumberOfLines());
+    resoultingMatrix.setMatrix(array, secondMatrix.getNumberOfColumns(), firstMatrix.getNumberOfLines());
   }
 }
