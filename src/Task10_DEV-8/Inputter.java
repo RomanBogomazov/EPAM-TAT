@@ -32,7 +32,7 @@ public class Inputter {
    * @return double[][] - massiv of elements of matrix
    */
   private double[][] inputMatrix(BufferedReader reader, int numberOfColumns, int numberOfLines) throws Exception {
-    double[][] massiv = new double[numberOfLines][numberOfColumns];
+    double[][] array = new double[numberOfLines][numberOfColumns];
     for (int i = 0; i < numberOfLines; i++) {
       for (int j = 0; j < numberOfColumns; j++) {
         boolean repeat = true;
@@ -42,7 +42,7 @@ public class Inputter {
           if (!inputString.matches("^\\d+\\.\\d{2}")) {
             continue;
           } else {
-            massiv[i][j] = Double.parseDouble(inputString);
+            array[i][j] = Double.parseDouble(inputString);
             repeat = false;
           }
         }
