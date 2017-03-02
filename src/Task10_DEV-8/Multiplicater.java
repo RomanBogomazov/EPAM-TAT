@@ -25,7 +25,7 @@ public class Multiplicater {
           BigDecimal bigDecimalValueInFirstMatrix = new BigDecimal(stringValueInFirstMatrix);
           String stringValueInSecondMatrix = String.valueOf(secondMatrix.getMatrix()[k][j]);
           BigDecimal bigDecimalValueInSecondMatrix = new BigDecimal(stringValueInSecondMatrix);
-          array[i][j] = massiv[i][j].add(bigDecimalValueInFirstMatrix.multiply(bigDecimalValueInSecondMatrix));
+          array[i][j] = array[i][j].add(bigDecimalValueInFirstMatrix.multiply(bigDecimalValueInSecondMatrix));
         }
       }
     }
