@@ -10,8 +10,7 @@ public class CheckerMultiplyMatrix {
    *
    * @params firstMatrix - for multiply(how A)
    * @params secondMatrix - for multiply(how B)
-   * @return boolean - true, if multiply possible
-   *                   false, if multiply impossible
+   * @return boolean - true, if multiply possible; false, if multiply impossible.
    */
   public boolean check(DoubleMatrix firstMatrix, DoubleMatrix secondMatrix) {
     if (firstMatrix.getNumberOfColumns() == secondMatrix.getNumberOfLines()) {

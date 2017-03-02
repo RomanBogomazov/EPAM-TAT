@@ -27,12 +27,10 @@ public class Multiplicater {
           BigDecimal bigDecimalValueInFirstMatrix = new BigDecimal(stringValueInFirstMatrix);
           String stringValueInSecondMatrix = String.valueOf(secondMatrix.getMatrix()[k][j]);
           BigDecimal bigDecimalValueInSecondMatrix = new BigDecimal(stringValueInSecondMatrix);
-          massiv[i][j] = massiv[i][j]
-              .add(bigDecimalValueInFirstMatrix.multiply(bigDecimalValueInSecondMatrix));
+          massiv[i][j] = massiv[i][j].add(bigDecimalValueInFirstMatrix.multiply(bigDecimalValueInSecondMatrix));
         }
       }
     }
-    resoultingMatrix
-        .setMatrix(massiv, secondMatrix.getNumberOfColumns(), firstMatrix.getNumberOfLines());
+    resoultingMatrix.setMatrix(massiv, secondMatrix.getNumberOfColumns(), firstMatrix.getNumberOfLines());
   }
 }

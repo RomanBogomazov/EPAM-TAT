@@ -31,8 +31,7 @@ public class Inputter {
    * @params numberOfLines - of matrix
    * @return double[][] - massiv of elements of matrix
    */
-  private double[][] inputMatrix(BufferedReader reader, int numberOfColumns, int numberOfLines)
-      throws Exception {
+  private double[][] inputMatrix(BufferedReader reader, int numberOfColumns, int numberOfLines) throws Exception {
     double[][] massiv = new double[numberOfLines][numberOfColumns];
     for (int i = 0; i < numberOfLines; i++) {
       for (int j = 0; j < numberOfColumns; j++) {
