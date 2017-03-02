@@ -6,7 +6,7 @@ package Task10;
 public class Main {
 
   /**
-   * Point of input in programm
+   *Entry point in programm
    */
   public static void main(String[] args) throws Exception {
     Inputter inputter = new Inputter();
