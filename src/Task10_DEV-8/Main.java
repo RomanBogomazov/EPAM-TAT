@@ -10,10 +10,19 @@ public class Main {
    */
   public static void main(String[] args) throws Exception {
     Inputter inputter = new Inputter();
-    Matrix firstMatrix = new Matrix();
-    Matrix secondMatrix = new Matrix();
+    DoubleMatrix firstMatrix = new DoubleMatrix();
+    DoubleMatrix secondMatrix = new DoubleMatrix();
     inputter.input(firstMatrix);
     inputter.input(secondMatrix);
-    //TODO: matrix multiplication
+    CheckerMultiplyMatrix checkerMultiplyMatrix = new CheckerMultiplyMatrix();
+    if(checkerMultiplyMatrix.check(firstMatrix, secondMatrix)) {
+      Multiplicater multiplicater = new Multiplicater();
+      BigDecimalMatrix resoultingMatrix = new  BigDecimalMatrix();
+      multiplicater.multiplyMatrix(firstMatrix, secondMatrix, resoultingMatrix);
+      Outputter outputter = new Outputter();
+      outputter.toDisplay(resoultingMatrix);
+    } else {
+      System.out.println("We cannot multiply this matrix");
+    }
   }
 }

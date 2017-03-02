@@ -10,9 +10,9 @@ public class Inputter {
 
   /**
    * Method for input  number of columns of matrix, numbers of lines of matrix, elements of matrix
-   * params Matrix @matrix
+   * @params Matrix matrix
    */
-  public void input(Matrix matrix) throws Exception {
+  public void input(DoubleMatrix matrix) throws Exception {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     System.out.println("Input matrix");
     int numberOfColumns = inputIntNumberOf(reader, "Columns");
@@ -23,10 +23,10 @@ public class Inputter {
 
   /**
    * Method for input  elements of matrix
-   * params BufferedReader @reader
-   * params int @numberOfColumns of matrix
-   * params int @numberOfLines of matrix
-   * return double[][] @massiv of elements of matrix
+   * @params BufferedReader reader
+   * @params int numberOfColumns of matrix
+   * @params int numberOfLines of matrix
+   * @return double[][] massiv of elements of matrix
    */
   private double[][] inputMatrix(BufferedReader reader, int numberOfColumns, int numberOfLines)
       throws Exception {
@@ -51,9 +51,9 @@ public class Inputter {
 
   /**
    * Method for input  number of (name of string) and return number
-   * params BufferedReader @reader
-   * params String @string - name of element
-   * return int numberOf
+   * @params BufferedReader reader
+   * @params String string - name of element
+   * @return int numberOf
    */
   private int inputIntNumberOf(BufferedReader reader, String string) throws Exception {
     System.out.println("Input number of " + string + " (int>0)");
