@@ -6,7 +6,8 @@ package Task10;
 public class Main {
 
   /**
-   *Entry point in programm
+   * Entry point in programm
+   * @param args[] not used
    */
   public static void main(String[] args) throws Exception {
     Inputter inputter = new Inputter();
