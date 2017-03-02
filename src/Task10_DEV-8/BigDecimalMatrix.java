@@ -3,18 +3,20 @@ package Task10;
 import java.math.BigDecimal;
 
 /**
- * Created by main on 02.03.2017.
+ * Class for matrix consist of Bigdecimal elements
  */
 public class BigDecimalMatrix {
+
   private int numberOfColumns;
   private int numberOfLines;
   private BigDecimal[][] matrix;
 
   /**
-   * Method for set matrix, number of columns, number of lines and write in internal fields
-   * @params double[][] matrix
-   * @params long numberOfColumns
-   * @params long numberOfLines
+   * Method for set matrix, number of columns, number of lines and write it all in internal fields
+   *
+   * @params matrix
+   * @params numberOfColumns
+   * @params numberOfLines
    */
   public void setMatrix(BigDecimal[][] matrix, int numberOfColumns, int numberOfLines) {
     this.matrix = matrix;
@@ -24,7 +26,8 @@ public class BigDecimalMatrix {
 
   /**
    * Method for get number of columns
-   * @return long numberOfColumns
+   *
+   * @return int - number of columns
    */
   public int getNumberOfColumns() {
     return numberOfColumns;
@@ -32,7 +35,8 @@ public class BigDecimalMatrix {
 
   /**
    * Method for get number of lines
-   * @return long numberOfLines
+   *
+   * @return int - number of lines
    */
   public int getNumberOfLines() {
     return numberOfLines;
@@ -40,7 +44,8 @@ public class BigDecimalMatrix {
 
   /**
    * Method for get matrix
-   * @return BigDecimal[][] matrix
+   *
+   * @return BigDecimal[][]
    */
   public BigDecimal[][] getMatrix() {
     return matrix;

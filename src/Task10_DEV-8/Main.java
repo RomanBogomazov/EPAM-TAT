@@ -15,14 +15,14 @@ public class Main {
     inputter.input(firstMatrix);
     inputter.input(secondMatrix);
     CheckerMultiplyMatrix checkerMultiplyMatrix = new CheckerMultiplyMatrix();
-    if(checkerMultiplyMatrix.check(firstMatrix, secondMatrix)) {
+    if (checkerMultiplyMatrix.check(firstMatrix, secondMatrix)) {
       Multiplicater multiplicater = new Multiplicater();
-      BigDecimalMatrix resoultingMatrix = new  BigDecimalMatrix();
+      BigDecimalMatrix resoultingMatrix = new BigDecimalMatrix();
       multiplicater.multiplyMatrix(firstMatrix, secondMatrix, resoultingMatrix);
       Outputter outputter = new Outputter();
       outputter.toDisplay(resoultingMatrix);
     } else {
-      System.out.println("We cannot multiply this matrix");
+      System.out.println("We cannot multiply these matrices.");
     }
   }
 }

@@ -4,13 +4,15 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * Class Inputter
+ * Class for input matrix
  */
 public class Inputter {
 
   /**
-   * Method for input  number of columns of matrix, numbers of lines of matrix, elements of matrix
-   * @params Matrix matrix
+   * Method for input from keybord number of columns of matrix, numbers of lines of matrix, elements
+   * of matrix and write thats all to matrix
+   *
+   * @params matrix
    */
   public void input(DoubleMatrix matrix) throws Exception {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -22,11 +24,12 @@ public class Inputter {
   }
 
   /**
-   * Method for input  elements of matrix
-   * @params BufferedReader reader
-   * @params int numberOfColumns of matrix
-   * @params int numberOfLines of matrix
-   * @return double[][] massiv of elements of matrix
+   * Method for input  elements of matrix and return massiv of elements
+   *
+   * @params reader
+   * @params numberOfColumns - of matrix
+   * @params numberOfLines - of matrix
+   * @return double[][] - massiv of elements of matrix
    */
   private double[][] inputMatrix(BufferedReader reader, int numberOfColumns, int numberOfLines)
       throws Exception {
@@ -51,9 +54,10 @@ public class Inputter {
 
   /**
    * Method for input  number of (name of string) and return number
-   * @params BufferedReader reader
-   * @params String string - name of element
-   * @return int numberOf
+   *
+   * @params reader
+   * @params string - name of element
+   * @return int - number of
    */
   private int inputIntNumberOf(BufferedReader reader, String string) throws Exception {
     System.out.println("Input number of " + string + " (int>0)");

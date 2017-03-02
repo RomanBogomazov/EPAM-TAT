@@ -1,7 +1,7 @@
 package Task10;
 
 /**
- * Class Matrix
+ * Class for matrix consist of double elements
  */
 public class DoubleMatrix {
 
@@ -10,10 +10,11 @@ public class DoubleMatrix {
   private double[][] matrix;
 
   /**
-   * Method for set matrix, number of columns, number of lines and write in internal fields
-   * @params double[][] matrix
-   * @params long numberOfColumns
-   * @params long numberOfLines
+   * Method for set matrix, number of columns, number of lines and write it all in internal fields
+   *
+   * @params matrix
+   * @params numberOfColumns
+   * @params numberOfLines
    */
   public void setMatrix(double[][] matrix, int numberOfColumns, int numberOfLines) {
     this.matrix = matrix;
@@ -23,7 +24,8 @@ public class DoubleMatrix {
 
   /**
    * Method for get number of columns
-   * @return long numberOfColumns
+   *
+   * @return int - number of columns from internal fields
    */
   public int getNumberOfColumns() {
     return numberOfColumns;
@@ -31,7 +33,8 @@ public class DoubleMatrix {
 
   /**
    * Method for get number of lines
-   * @return long numberOfLines
+   *
+   * @return int - number of lines from internal fields
    */
   public int getNumberOfLines() {
     return numberOfLines;
@@ -39,7 +42,8 @@ public class DoubleMatrix {
 
   /**
    * Method for get matrix
-   * @return double[][] matrix
+   *
+   * @return double[][] - matrix whith elements from internal fields
    */
   public double[][] getMatrix() {
     return matrix;
