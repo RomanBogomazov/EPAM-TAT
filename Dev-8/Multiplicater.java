@@ -1,14 +1,12 @@
 /**
  * Class to multiplicate matrix.
  */
-
 class Multiplicater {
  
 /**
  * Method return matrix-result of multiplicate matrix.
  * @mass - array of matrix.
  */
-
   private ElementOfMatrix element = new ElementOfMatrix();
 
   public double[][] get(double[][][] mass) {

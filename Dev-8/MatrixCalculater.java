@@ -1,13 +1,11 @@
 /**
- * Main class.
+ * Main class of project.
  */
-
 class MatrixCalculater {
 
 /**
- * Main method.
+ * Main method of project.
  */
-
   public static void main(String[] args) {
     Input input = new Input();
     double[][][] mass = input.get();

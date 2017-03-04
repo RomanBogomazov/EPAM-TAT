@@ -1,13 +1,11 @@
 /**
  * Class otput matrix.
  */
-
 class Output {
 
 /**
  * Output matrix on line.
  */
-
   public void get(double[][] mass) {
     for(int i = 0; i < mass.length; i++) {
       System.out.print("Line ¹ " + (i + 1) + ": ");

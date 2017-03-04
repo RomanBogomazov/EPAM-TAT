@@ -3,13 +3,11 @@ import java.util.*;
 /**
  * Class to input double matrix.
  */
-
 class Input {
 
 /**
  * Method to input double array matrix from command line
  */
-
   private Scanner scan = new Scanner(System.in);
   private int matrixNumber = 0;
 
