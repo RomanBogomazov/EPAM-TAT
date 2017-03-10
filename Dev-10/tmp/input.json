@@ -1,0 +1,18 @@
+{
+  "orderID": ,
+  "shopperName": ,
+  "shopperEmail": ,
+  "contents": [
+    {
+      "productID": ,
+      "productName": ,
+      "quantity": 
+    },
+    {
+      "productID": ,
+      "productName": ,
+      "quantity": 
+    }
+  ],
+  "orderCompleted": 
+}
