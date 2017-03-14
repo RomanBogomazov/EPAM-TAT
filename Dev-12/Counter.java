@@ -5,15 +5,11 @@ class Counter {
 
 /**
  * Counter for pawn.
- * @current is current figure position.
- * @wishful is wishful figure position.
+ * @param current is current figure position.
+ * @param wishful is wishful figure position.
+ * @return count of moves from current to wishful position.
  */
   int simpleCounter(String current, String wishful){
-    if(wishful.charAt(1) > current.charAt(1)) {
-      return wishful.charAt(1) - current.charAt(1);
-    }
-    else {
-      return current.charAt(1) - wishful.charAt(1);
-    }
+      return Math.abs(wishful.charAt(1) - current.charAt(1));
   }
 }

@@ -2,45 +2,42 @@
  * Class to check conditions.
  */
 class Checker{
-
-/**
- * Check positions on location figures on one line.
- * @current is current figure position.
- * @wishful is wishful figure position.
- * @return 
- */
-  boolean onLine(String current, String wishful) {
-    if(current.charAt(0) == wishful.charAt(0)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
+    private int[] curr = new int[2];
+    private int[] wish = new int[2];
 
 /**
  * Check figures movement on one side.
- * @color is figure color.
- * @current is current figure position.
- * @wishful is wishful figure position.
+ * @param color is figure color.
+ * @param current is current figure position.
+ * @param wishful is wishful figure position.
  * @return 
  */
   boolean Movement(String color, String current, String wishful) {
-    if(color.equals("w")) {
-      if(current.charAt(1) < wishful.charAt(1)) {
-        return true;
+      curr[0] = current.charAt(0);
+      wish[0] = wishful.charAt(0);
+      curr[1] = current.charAt(1);
+      wish[1] = wishful.charAt(1);
+
+      if (wish[0] - curr[0] <= wish[1] - curr[1] & (curr[0] + curr[1]) % 2 == 0 & (wish[0] + wish[1]) % 2 == 0) {
+          if (color.equals("w")) {
+              if (wish[1] > curr[1]) {
+                  return true;
+              }
+              else  {
+                  return false;
+              }
+          }
+          else {
+              if (wish[1] < curr[1]) {
+                  return true;
+              }
+              else  {
+                  return false;
+              }
+          }
       }
       else {
-        return false;
+          return false;
       }
-    }
-    else {
-      if(current.charAt(1) > wishful.charAt(1)) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
   }
 }

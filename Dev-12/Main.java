@@ -11,19 +11,18 @@ class Main {
     Checker check = new Checker();
     Counter counter = new Counter();
     String color;
-    String currentCoord;
-    String wishfulCoord;
-    boolean[] criterion = new boolean[3];
+    String current;
+    String wishful;
 
     System.out.print("Input figure color(w/b): ");
     color = input.get();
     System.out.print("Input current coordinate: ");
-    currentCoord = input.get();
+    current = input.get();
     System.out.print("Input wishful coordinate: ");
-    wishfulCoord = input.get();
+    wishful = input.get();
 
-    if(check.onLine(currentCoord, wishfulCoord) == true & check.Movement(color, currentCoord, wishfulCoord) == true) {
-      System.out.println("Movement is possible on " + counter.simpleCounter(currentCoord, wishfulCoord) + " steps");
+    if(check.Movement(color, current, wishful) == true) {
+      System.out.println("Movement is possible on " + counter.simpleCounter(current, wishful) + " steps");
     }
     else {
       System.out.println("Movement is impossible");
