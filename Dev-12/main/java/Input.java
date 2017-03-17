@@ -5,11 +5,13 @@ import java.util.Scanner;
  */
 class Input {
   private Scanner scan = new Scanner(System.in);
+  private String input;
 
 /**
  * @return data from command line
  */
   String get() {
-    return scan.next();
+      input = scan.nextLine();
+      return input;
   }
 }
