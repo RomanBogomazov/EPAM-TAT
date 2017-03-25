@@ -44,9 +44,9 @@ public class Winner {
         a[1] = buttons[1][1].getText();
         a[2] = buttons[0][2].getText();
         if (a[0] == a[1] & a[1] == a[2] & a[0] != "-") {
-            winner[0] = buttons[2][0];
+            winner[2] = buttons[2][0];
             winner[1] = buttons[1][1];
-            winner[2] = buttons[0][2];
+            winner[0] = buttons[0][2];
             haveWinner = true;
         }
     return haveWinner;
