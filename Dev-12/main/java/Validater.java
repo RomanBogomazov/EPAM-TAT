@@ -9,38 +9,35 @@ class Validator {
      * @return answer on valid length of checker cell.
      */
     boolean length(String coordinate) {
+        boolean answer = false;
         if (coordinate.length() == 2) {
-            return true;
+            answer = true;
         }
-        else {
-            return false;
-        }
+        return answer;
     }
 
     /**
      * @param color
-     * @return
+     * @return answer on a question: "Inputting color valid - equals 'w' or 'b'?"
      */
     boolean color(String color) {
+        boolean answer = false;
         if (color.equals("w") | color.equals("b")) {
-            return true;
+            answer = true;
         }
-        else {
-            return false;
-        }
+        return answer;
     }
 
     /**
      * Validate coordinate on range: a1-h8.
      * @param coordinate
-     * @return
+     * @return answer on a question: "Inputting coordinate valid - included in the limit a1-h8?"
      */
     boolean cellCoordinate(String coordinate) {
+        boolean answer = false;
         if (((int)coordinate.charAt(0) >= 98 & (int)coordinate.charAt(0) <= 105) & (Integer.valueOf(coordinate.charAt(1)) >= 49 & Integer.valueOf(coordinate.charAt(1)) <= 56)){
-            return true;
+            answer = true;
         }
-        else {
-            return false;
-        }
+        return answer;
     }
 }
