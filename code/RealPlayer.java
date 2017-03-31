@@ -9,6 +9,7 @@ import javax.swing.JButton;
 class RealPlayer {
   private Winner winner = new Winner();
   private int gridSize;
+  private int countOfWinnerCombination = 3;
   private int step;
 
   void manage(JButton[][] buttons, int step, int x, int y) {
@@ -31,6 +32,8 @@ class RealPlayer {
         for (int j = 0; j < gridSize; j++) {
           buttons[i][j].setEnabled(false);
         }
+      }
+      for (int i = 0; i < countOfWinnerCombination; i++) {
         winner.getWinner()[i].setBackground(new Color(255, 0, 0));
       }
             /*winner.getWinner()[0].setText("WI");

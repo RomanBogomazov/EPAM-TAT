@@ -9,20 +9,26 @@ import java.awt.*;
  */
 class Field {
   private Font font = new Font("Times New Roman", Font.BOLD, 96);
-  private int gridSize = 3;
+  private int gridSize;
   private String defaultSymbol = "-";
-  private JButton[][] buttons = new JButton[gridSize][gridSize];
+  private JButton[][] buttons;
   private int step = 0;
   private SimpleComp simpleComp = new SimpleComp();
   private MediumComp mediumComp = new MediumComp();
   private SmartComp smartComp = new SmartComp();
   private RealPlayer realPlayer = new RealPlayer();
 
-  Field(JFrame frame, String opponent) {
+  Field(JFrame frame, String opponent, int intSizeField) {
+    gridSize = intSizeField;
+    buttons = new JButton[gridSize][gridSize];
+    int buttonWidth;
+    int buttonHeight;
     for (int i = 0; i < gridSize; i++) {
       for (int j = 0; j < gridSize; j++) {
         buttons[i][j] = new JButton(defaultSymbol);
-        buttons[i][j].setBounds(frame.getWidth()/8 + i*frame.getWidth()/4, frame.getHeight()/8 + j*frame.getHeight()/4, frame.getWidth()/4, frame.getHeight()/4);
+        buttonWidth = 3*frame.getWidth()/(gridSize*4);
+        buttonHeight = 3*frame.getHeight()/(gridSize*4);
+        buttons[i][j].setBounds(frame.getWidth()/8 + i*buttonWidth, frame.getHeight()/8 + j*buttonHeight, buttonWidth, buttonHeight);
         buttons[i][j].setFont(font);
         frame.add(buttons[i][j]);
 
