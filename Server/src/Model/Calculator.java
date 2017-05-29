@@ -1,6 +1,7 @@
 package Model;
 
 /**
+ * Class to calculate data and save answer in itself.
  * Created by User on 29.05.2017.
  */
 public class Calculator {
@@ -10,7 +11,7 @@ public class Calculator {
     answer = 0;
   }
 
-  public void summ(Float element){
+  public void summary(Float element){
     answer+=element;
   }
 

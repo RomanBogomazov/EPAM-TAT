@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * Server.
  * Created by User on 29.05.2017.
  */
 public class Server implements Runnable {

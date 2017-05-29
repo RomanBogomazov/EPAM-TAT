@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
+ * Class to debug a server desktop application.
  * Created by User on 29.05.2017.
  */
 public class Main extends JFrame implements Runnable{
@@ -27,7 +28,8 @@ public class Main extends JFrame implements Runnable{
     new Thread(new Server()).start();
   }
 
-  public Main(String name){
+  /** Constructor initialize desktop.*/
+  Main(String name){
     super(name);
     calculator = new Calculator();
 
@@ -50,7 +52,7 @@ public class Main extends JFrame implements Runnable{
       @Override
       public void actionPerformed(ActionEvent e) {
         if (e.getSource()==buttonPlus){
-          calculator.summ(Float.valueOf(text.getText()));
+          calculator.summary(Float.valueOf(text.getText()));
           sendData(calculator.getAnswer());
         }
       }
@@ -72,6 +74,7 @@ public class Main extends JFrame implements Runnable{
     add(buttonMinus);
   }
 
+  /** rendering of connection server-client. */
   @Override
   public void run() {
     try {
@@ -88,6 +91,7 @@ public class Main extends JFrame implements Runnable{
     }
   }
 
+  /** function to send data to server. */
   private static void sendData(Object obj){
     try {
       output.flush();
