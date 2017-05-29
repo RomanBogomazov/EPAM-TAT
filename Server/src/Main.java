@@ -1,3 +1,5 @@
+import Model.Calculator;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -7,7 +9,6 @@ import java.net.InetAddress;
 import java.net.Socket;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -18,6 +19,8 @@ public class Main extends JFrame implements Runnable{
   private static Socket connection;
   private static ObjectOutputStream output;
   private static ObjectInputStream input;
+  private Font font = new Font("Times New Roman", Font.BOLD, 32);
+  private Calculator calculator;
 
   public static void main(String[] args){
     new Thread(new Main("Test")).start();
@@ -26,6 +29,8 @@ public class Main extends JFrame implements Runnable{
 
   public Main(String name){
     super(name);
+    calculator = new Calculator();
+
     setLayout(null);
     setSize(900, 600);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,27 +38,24 @@ public class Main extends JFrame implements Runnable{
     setLocationRelativeTo(null);
 
     final JTextField text = new JTextField("");
-    final JLabel label = new JLabel("0");
     final JButton buttonPlus = new JButton("Summary");
     final JButton buttonMinus = new JButton("Difference");
 
-    text.setBounds(200, 100, 500, 100);
+    text.setBounds(200, 200, 500, 100);
+    text.setFont(font);
     add(text);
-
-    label.setBounds(200, 200, 500, 100);
-    add(label);
 
     buttonPlus.setBounds(200, 300, 250, 100);
     buttonPlus.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         if (e.getSource()==buttonPlus){
-          int summ = Integer.valueOf(label.getText())+Integer.valueOf(text.getText());
-          label.setText(String.valueOf(summ));
-          sendData(summ);
+          calculator.summ(Float.valueOf(text.getText()));
+          sendData(calculator.getAnswer());
         }
       }
     });
+    buttonPlus.setFont(font);
     add(buttonPlus);
 
     buttonMinus.setBounds(450, 300, 250, 100);
@@ -61,12 +63,12 @@ public class Main extends JFrame implements Runnable{
       @Override
       public void actionPerformed(ActionEvent e) {
         if (e.getSource()==buttonMinus){
-          int difference = Integer.valueOf(label.getText())-Integer.valueOf(text.getText());
-          label.setText(String.valueOf(difference));
-          sendData(difference);
+          calculator.difference(Float.valueOf(text.getText()));
+          sendData(calculator.getAnswer());
         }
       }
     });
+    buttonMinus.setFont(font);
     add(buttonMinus);
   }
 
